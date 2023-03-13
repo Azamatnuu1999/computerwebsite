@@ -1,0 +1,11 @@
+.six{
+    .contain{
+        &__h3{
+            font-size: 24px;
+            font-weight: 600;
+        }
+        &__p{
+            font-size: 13px;
+        }
+    }
+}

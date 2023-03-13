@@ -1,0 +1,68 @@
+.five{
+    &__h3{
+        font-size: 24px;
+    }
+    .main{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        font-size: 13px;
+        .card1{
+            width: 24%;
+            box-shadow: 0 0 5px $kulrang;
+            .bottom{
+                padding: 3px;
+            }
+            p{
+                margin-bottom: 0;
+                span{
+                    a{
+                        color: $kok;
+                    }
+                    .grey{
+                        color: $kulrang;
+                    }
+                }
+                
+            }
+            p:last-child{
+                display: flex;
+                justify-content: space-between;
+            }
+        }
+        .card1:hover{
+            cursor: pointer;
+            transform: scale(1.03);
+        }
+    }
+}
+
+@media(max-width:900px){
+    .five{
+        .contain{
+            .main{
+                .card1{
+                    width: 48%;
+                    margin: 10px auto;
+                }
+            }
+        }
+    }
+}
+
+@media(max-width:400px){
+    .five{
+        .contain{
+            .main{
+                .card1{
+                    width: 96%;
+                        margin: 10px auto;
+                    img{
+                        width: 100%;
+                    }
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

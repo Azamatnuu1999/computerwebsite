@@ -1,0 +1,240 @@
+header{
+    .navbar{
+        background-color: #060F42;
+            width: 100%;
+            padding: 0 10%;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            padding-top: 10px;
+            font-size: 14px;
+            &__input{
+                display: none;
+            }
+            &__input:checked ~ .navbar__left{
+                display: block;
+                li{
+                    a{
+                        display: block;
+                    }
+                }
+            }
+            &__left{
+                width: fit-content;
+                color: white;
+                display: flex;
+                margin-top: 0;
+                gap: 5px;
+                padding-left: 0;
+                label{
+                    display: none;
+                }
+            }
+            &__right{
+                margin-top: 0;
+                padding-left: 0;
+                width: fit-content;
+                display: flex;
+                gap: 5px;
+                color: white;
+            }
+    }
+    .contain{
+        padding-top: 0;
+        .navbar{
+            background-color: white;
+            padding: 20px 0;
+            &__center{
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                .left{
+                    width: 260px;
+                    display: flex;
+                    a{
+                        width: 48%;
+                        margin: 0 1%;
+                        img{
+                            width: 100%;
+                        }
+                    }
+                }
+                .center{
+                    width: calc(100% - 550px);
+                    input{
+                        width: calc(100% - 49px);
+                        outline: none;
+                        border: 1px solid $kulrang;
+                        padding: 4px 12px;
+                    }
+                    label{
+                        background-color: $kok;
+                        color: white;
+                        padding: 5px 10px;
+                    }
+                    label:hover{
+                        background-color: #060F42;
+                    }
+                }
+                .right{
+                    width: 240px;
+                    margin-top: 20px;
+                    &__ul{
+                        align-items: center;
+                        padding-left: 0;
+                        display: flex;
+                        gap: 5px;
+                        li:first-child{
+                            width: 160px;
+                            font-weight: 700;
+                            border-right: 1px solid grey;
+                        }
+                    }
+                }
+            }
+        }
+        .showcase{
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            .left{
+                width: 230px;
+                padding-left: 0;
+                font-size: 14px;
+                li{
+                    width: 100%;
+                    padding-bottom: 10px;
+                    border-bottom: 1px solid $kulrang;
+                    display: flex;
+                    justify-content: space-between;
+                }
+            }
+            .right{
+                width: calc(100% - 250px);
+                .top{
+                    background-image: url(../media/Hero\ home\ oage.png);
+                    padding: 50px 10px 100px;
+                    background-size: cover;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    margin-bottom: 30px;
+                    .text{
+                        &__h1{
+                            text-transform: uppercase;
+                            color: white;
+                            font-size: 20px;
+                            margin-bottom: 0;
+                            font-weight: 700;
+                        }
+                        &__h3{
+                            text-transform: uppercase;
+                            font-size: 13px;
+                            margin-top: 10px;
+                            color: $kulrang;
+                        }
+                        &__button{
+                            text-transform: uppercase;
+                            background-color: $qizil;
+                            color: white;
+                            font-size: 12px;
+                            border: 1px solid $qizil;
+                            border-radius: 4px;
+                            padding: 5px 12px;
+                        }
+                        &__button:hover{
+                            background-color: $kulrang;
+                            color: $qizil;
+                        }
+                    }
+                }
+                .bottom{
+                    display: flex;
+                    justify-content: space-between;
+                    flex-wrap: wrap;
+                    .card1{
+                        width: 12%;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media(max-width:800px){
+    header{
+        .contain{
+            .navbar{
+                .center{
+                    display: none;
+                }
+            }
+            .showcase{
+                .right{
+                    .top{
+                        padding-bottom: 30px;
+                        margin-bottom: 10px;
+                    }
+                    .bottom{
+                        justify-content: space-around;
+                        .card1{
+                            width: 24%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media(max-width:650px){
+
+}
+
+@media(max-width:600px){
+    header{
+        .navbar{
+            &__left{
+                li{
+                    a{
+                        display: none;
+                    }
+                    label{
+                        display: block;
+                    }
+                }
+            }
+        }
+        .contain{
+            .showcase{
+                .left{
+                    width: 100%;
+                }
+                .right{
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+@media(max-width:420px){
+    header{
+        .contain{
+            .navbar{
+                &__center{
+                    flex-wrap: wrap;
+                    .left{
+                        width: 240px;
+                        margin: 5px auto;
+                    }
+                    .right{
+                        width: 230px;
+                        margin: 10px auto;
+                    }
+                }
+            }
+        }
+    }
+}
